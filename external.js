@@ -33,3 +33,24 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
+
+function game() {
+    for (let i = 0; i < 10;i++){
+        let playerSelection = prompt().toLowerCase();
+        let computerSelection = computerPlay();
+        console.log("Computer plays: " + computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+        console.log("Computer Points: " + computerPoints);
+        console.log("Player Points: " + playerPoints);
+        if (computerPoints == 3) {
+            console.log("You lose!");
+            break
+        } else if (playerPoints == 3) {
+            console.log("You win!");
+            break
+        } 
+    }
+
+}
+console.log(("First to 3 wins!"));
+game();
