@@ -40,7 +40,16 @@ function game() {
   const results = document.createElement('div');
   container.appendChild(results)
 
-  
+  //Make clicking buttons react to functions
+
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      playerSelection = button.className;
+
+     
+    })
+  })
 }
 
 //console.log(("First to 3 wins!"));
