@@ -47,7 +47,21 @@ function game() {
     button.addEventListener('click', () => {
       playerSelection = button.className;
 
-     
+      //Make a player result appear
+
+      const playerpp = document.querySelector('.playerpp');
+      playerpp.style.color = 'blue';
+      playerpp.textContent = 'Player points: ' + playerPoints;
+      container.appendChild(playerpp);
+
+      //Make a computer result appear
+
+      const computerpp = document.querySelector('.computerpp');
+      computerpp.style.color = 'red';
+      computerpp.textContent = 'Computer points: ' + computerPoints;
+      container.appendChild(computerpp);
+
+ 
     })
   })
 }
