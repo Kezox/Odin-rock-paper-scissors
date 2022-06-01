@@ -73,6 +73,11 @@ function game() {
      battle.textContent = '' + playRound(playerSelection, computerSelection);
      container.appendChild(battle);
 
+     if (computerPoints == 5) {
+      alert("You lose!");
+    } else if (playerPoints == 5) {
+      alert("You win!");
+    }
 
     })
   })
