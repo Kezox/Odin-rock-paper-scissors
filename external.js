@@ -61,7 +61,19 @@ function game() {
       computerpp.textContent = 'Computer points: ' + computerPoints;
       container.appendChild(computerpp);
 
- 
+     //Make computer's choice appear
+     let computerSelection = computerPlay();
+     const computerChoice = document.querySelector('.computerChoice');
+     computerChoice.textContent = "Computer plays: " + computerSelection;
+     container.appendChild(computerChoice);
+
+     //Make the actual battle appear
+
+     const battle = document.querySelector('.battle');
+     battle.textContent = '' + playRound(playerSelection, computerSelection);
+     container.appendChild(battle);
+
+
     })
   })
 }
